@@ -1,0 +1,5 @@
+﻿D:\Program\VS\VS\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  dllmain.cpp
+D:\bsuir\5 term\SP\projects\HookingDLL\HookingDLL\dllmain.cpp(100,33): warning C4311: 'type cast': pointer truncation from 'NTSTATUS (__cdecl *)(SYSTEM_INFORMATION_CLASS,PVOID,ULONG,PULONG)' to 'DWORD'
+D:\bsuir\5 term\SP\projects\HookingDLL\HookingDLL\dllmain.cpp(100,33): warning C4302: 'type cast': truncation from 'NTSTATUS (__cdecl *)(SYSTEM_INFORMATION_CLASS,PVOID,ULONG,PULONG)' to 'DWORD'
+  HookingDLL.vcxproj -> D:\bsuir\5 term\SP\SemesterWorkTMP\hook.dll
