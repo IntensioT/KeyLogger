@@ -1,4 +1,6 @@
 ﻿  WindowMain.cpp
-D:\bsuir\5 term\SP\projects\SemesterWork\KeyLogger\WindowMain.cpp(5,1): warning C4005: 'maxChars': macro redefinition
-D:\bsuir\5 term\SP\projects\SemesterWork\KeyLogger\HandleUserInputs.h(11,1): message : see previous definition of 'maxChars'
-  KeyLogger.vcxproj -> D:\bsuir\5 term\SP\projects\SemesterWork\x64\Debug\KeyLogger.exe
+D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger\KeyLogger\WindowMain.cpp(8,1): warning C4005: 'maxChars': macro redefinition
+D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger\KeyLogger\HandleUserInputs.h(11,1): message : see previous definition of 'maxChars'
+  KeyLogger.vcxproj -> D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger\x64\Debug\KeyLogger.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.

