@@ -1,0 +1,10 @@
+﻿  DeleteLaterServer.cpp
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(118,23): warning C4244: 'initializing': conversion from 'SOCKET' to 'int', possible loss of data
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(154,25): warning C4309: 'initializing': truncation of constant value
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(158,31): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(187,99): warning C4474: 'sprintf' : too many arguments passed for format string
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(187,99): message : placeholders and their parameters expect 3 variadic arguments, but 6 were provided
+D:\Programs\Visual Studio\projects\DeleteLaterServer\DeleteLaterServer\DeleteLaterServer.cpp(212,38): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  DeleteLaterServer.vcxproj -> D:\Programs\Visual Studio\projects\DeleteLaterServer\x64\Debug\DeleteLaterServer.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.
