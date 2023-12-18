@@ -1,0 +1,974 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C28251",
+          "message": {
+            "text": "Inconsistent annotation for 'wWinMain': this instance has no annotations. See d:\\windows kits\\10\\include\\10.0.22621.0\\um\\winbase.h(1050). "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                },
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "wWinMain",
+                  "decoratedName": "wWinMain",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'hThread' could be '0'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                },
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 2,
+                  "endLine": 184,
+                  "endColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "wWinMain",
+                  "decoratedName": "wWinMain",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 119,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 123,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 134,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'hUserInp->HookId==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 159,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 160,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'hUserInp->WindowHookId==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 167,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 167,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 173,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 175,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 176,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this loop, (assume 'GetMessageW(&msg, 0, 0, 0)' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 180,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 181,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 184,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:346)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 184,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' should not be NULL, because this is not consistent with the SAL annotation on 'WaitForSingleObject'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'hThread' could be '0'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 2,
+                  "endLine": 187,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "wWinMain",
+                  "decoratedName": "wWinMain",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 119,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 123,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 134,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'hUserInp->HookId==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 159,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 160,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'hUserInp->WindowHookId==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 167,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 167,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 173,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 175,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 176,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this loop, (assume 'GetMessageW(&msg, 0, 0, 0)' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 180,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 181,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 184,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:346)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 187,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' is an Input to 'CloseHandle' (declared at d:\\windows kits\\10\\include\\10.0.22621.0\\um\\handleapi.h:39)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+                          },
+                          "region": {
+                            "startLine": 187,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'hThread' should not be NULL, because this is not consistent with the SAL annotation on 'CloseHandle'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.37.32824.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/WindowMain.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "7dd7bac595983776c28c64b1b6b008a37e398d2faa64cee562da8d227e3330ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/bugor/5 sem/sp/semesterwork/projectclone/keylogger-master/keylogger/handleuserinputs.h"
+          },
+          "hashes": {
+            "sha-256": "1434652a5e8d505ccfdec8e44260495007eac94f08c69e7c57a1f84378059d78"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/bugor/5 sem/sp/semesterwork/projectclone/keylogger-master/keylogger/dllinjector.h"
+          },
+          "hashes": {
+            "sha-256": "250d2eb5a7b86afd2c02fab07a0b52bfe06af7c8a7469b679356f663d3cedddb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/bugor/5 sem/sp/semesterwork/projectclone/keylogger-master/keylogger/networksender.h"
+          },
+          "hashes": {
+            "sha-256": "d45e64440eadc5d394306db2d4a118e0dba32710ba38eae72dd9950eee5ef0d3"
+          }
+        }
+      ]
+    }
+  ]
+}

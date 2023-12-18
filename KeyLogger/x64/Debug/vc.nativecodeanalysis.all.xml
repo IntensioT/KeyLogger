@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>DllInjector.cpp</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'GetModuleHandleA((CHAR *)"Kernel32.dll")' could be '0'.</DESCRIPTION>
+    <FUNCTION>inject_DLL</FUNCTION>
+    <DECORATED>?inject_DLL@@YAPEAXPEBDH@Z</DECORATED>
+    <FUNCLINE>75</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>86</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>107</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>96</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'&lt;symbol&gt;' receives the Return value from 'GetModuleHandleA' (declared at d:\windows kits\10\include\10.0.22621.0\um\libloaderapi.h:235)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'GetModuleHandleA((CHAR *)"Kernel32.dll")' should not be NULL, because this is not consistent with the SAL annotation on 'GetProcAddress'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>DllInjector.cpp</FILENAME>
+      <LINE>108</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'h_rThread' could be '0'.</DESCRIPTION>
+    <FUNCTION>inject_DLL</FUNCTION>
+    <DECORATED>?inject_DLL@@YAPEAXPEBDH@Z</DECORATED>
+    <FUNCLINE>75</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>86</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>107</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>96</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>102</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\windows kits\10\include\10.0.22621.0\um\synchapi.h:346)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' should not be NULL, because this is not consistent with the SAL annotation on 'WaitForSingleObject'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>DllInjector.cpp</FILENAME>
+      <LINE>111</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'h_rThread' could be '0'.</DESCRIPTION>
+    <FUNCTION>inject_DLL</FUNCTION>
+    <DECORATED>?inject_DLL@@YAPEAXPEBDH@Z</DECORATED>
+    <FUNCLINE>75</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>86</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>107</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>96</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>102</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\windows kits\10\include\10.0.22621.0\um\synchapi.h:346)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>111</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an In/Out argument to 'GetExitCodeThread' (declared at d:\windows kits\10\include\10.0.22621.0\um\processthreadsapi.h:313)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>111</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' should not be NULL, because this is not consistent with the SAL annotation on 'GetExitCodeThread'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>DllInjector.cpp</FILENAME>
+      <LINE>114</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'h_rThread' could be '0'.</DESCRIPTION>
+    <FUNCTION>inject_DLL</FUNCTION>
+    <DECORATED>?inject_DLL@@YAPEAXPEBDH@Z</DECORATED>
+    <FUNCLINE>75</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>86</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>107</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>96</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>102</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\windows kits\10\include\10.0.22621.0\um\synchapi.h:346)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>111</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an In/Out argument to 'GetExitCodeThread' (declared at d:\windows kits\10\include\10.0.22621.0\um\processthreadsapi.h:313)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'h_rThread' is an Input to 'CloseHandle' (declared at d:\windows kits\10\include\10.0.22621.0\um\handleapi.h:39)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>DllInjector.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'h_rThread' should not be NULL, because this is not consistent with the SAL annotation on 'CloseHandle'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>54</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>6242</DEFECTCODE>
+    <DESCRIPTION>A jump from this scope forces local unwind.  This incurs a performance penalty. Return outside the try's scope by using __leave.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::SetWinHook</FUNCTION>
+    <DECORATED>?SetWinHook@HandleUserInput@@QEAAPEAUHWINEVENTHOOK__@@P6AXPEAU2@KPEAUHWND__@@JJKK@Z@Z</DECORATED>
+    <FUNCLINE>51</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>80</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'wnd_title' could be '0'.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetActiveWindowTitle</FUNCTION>
+    <DECORATED>?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>72</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'wnd_title' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'wnd_title' is an In/Out argument to 'GetWindowTextW' (declared at d:\windows kits\10\include\10.0.22621.0\um\winuser.h:8950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'wnd_title' should not be NULL, because this is not consistent with the SAL annotation on 'GetWindowTextW'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>71</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetActiveWindowTitle</FUNCTION>
+    <DECORATED>?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>171</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'GetKeyboardState'.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetSymbol</FUNCTION>
+    <DECORATED>?GetSymbol@HandleUserInput@@SA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@I@Z</DECORATED>
+    <FUNCLINE>165</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>WindowMain.cpp</FILENAME>
+      <LINE>112</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'wWinMain': this instance has no annotations. See d:\windows kits\10\include\10.0.22621.0\um\winbase.h(1050). </DESCRIPTION>
+    <FUNCTION>wWinMain</FUNCTION>
+    <DECORATED>wWinMain</DECORATED>
+    <FUNCLINE>112</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>WindowMain.cpp</FILENAME>
+      <LINE>184</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hThread' could be '0'.</DESCRIPTION>
+    <FUNCTION>wWinMain</FUNCTION>
+    <DECORATED>wWinMain</DECORATED>
+    <FUNCLINE>112</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>122</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>123</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>130</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>136</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hThread' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>148</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'hUserInp-&gt;HookId==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>155</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>155</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>159</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'hUserInp-&gt;WindowHookId==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>167</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>167</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>173</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>175</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>176</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'GetMessageW(&amp;msg, 0, 0, 0)' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>180</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>181</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>184</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\windows kits\10\include\10.0.22621.0\um\synchapi.h:346)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>184</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hThread' should not be NULL, because this is not consistent with the SAL annotation on 'WaitForSingleObject'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>WindowMain.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hThread' could be '0'.</DESCRIPTION>
+    <FUNCTION>wWinMain</FUNCTION>
+    <DECORATED>wWinMain</DECORATED>
+    <FUNCLINE>112</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>122</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>123</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>130</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>136</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hThread' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>148</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'hUserInp-&gt;HookId==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>155</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>155</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>159</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'hUserInp-&gt;WindowHookId==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>167</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>167</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>173</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>175</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>176</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'GetMessageW(&amp;msg, 0, 0, 0)' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>180</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>181</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>184</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hThread' is an In/Out argument to 'WaitForSingleObject' (declared at d:\windows kits\10\include\10.0.22621.0\um\synchapi.h:346)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>187</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hThread' is an Input to 'CloseHandle' (declared at d:\windows kits\10\include\10.0.22621.0\um\handleapi.h:39)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>WindowMain.cpp</FILENAME>
+        <LINE>187</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hThread' should not be NULL, because this is not consistent with the SAL annotation on 'CloseHandle'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT></DEFECTS>

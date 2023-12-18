@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>54</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>6242</DEFECTCODE>
+    <DESCRIPTION>A jump from this scope forces local unwind.  This incurs a performance penalty. Return outside the try's scope by using __leave.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::SetWinHook</FUNCTION>
+    <DECORATED>?SetWinHook@HandleUserInput@@QEAAPEAUHWINEVENTHOOK__@@P6AXPEAU2@KPEAUHWND__@@JJKK@Z@Z</DECORATED>
+    <FUNCLINE>51</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>80</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'wnd_title' could be '0'.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetActiveWindowTitle</FUNCTION>
+    <DECORATED>?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>72</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'wnd_title' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'wnd_title' is an In/Out argument to 'GetWindowTextW' (declared at d:\windows kits\10\include\10.0.22621.0\um\winuser.h:8950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+        <FILENAME>HandleUserInput.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'wnd_title' should not be NULL, because this is not consistent with the SAL annotation on 'GetWindowTextW'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>71</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetActiveWindowTitle</FUNCTION>
+    <DECORATED>?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Bugor\5 sem\SP\SemesterWork\projectClone\KeyLogger-master\KeyLogger\</FILEPATH>
+      <FILENAME>HandleUserInput.cpp</FILENAME>
+      <LINE>171</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'GetKeyboardState'.</DESCRIPTION>
+    <FUNCTION>HandleUserInput::GetSymbol</FUNCTION>
+    <DECORATED>?GetSymbol@HandleUserInput@@SA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@I@Z</DECORATED>
+    <FUNCLINE>165</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

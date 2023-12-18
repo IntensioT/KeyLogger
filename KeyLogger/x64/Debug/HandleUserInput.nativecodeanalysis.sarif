@@ -1,0 +1,254 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6242",
+          "message": {
+            "text": "A jump from this scope forces local unwind.  This incurs a performance penalty. Return outside the try's scope by using __leave."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                },
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 3,
+                  "endLine": 54,
+                  "endColumn": 95
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HandleUserInput::SetWinHook",
+                  "decoratedName": "?SetWinHook@HandleUserInput@@QEAAPEAUHWINEVENTHOOK__@@P6AXPEAU2@KPEAUHWND__@@JJKK@Z@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'wnd_title' could be '0'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 2,
+                  "endLine": 80,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HandleUserInput::GetActiveWindowTitle",
+                  "decoratedName": "?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                          },
+                          "region": {
+                            "startLine": 79,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'wnd_title' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "'wnd_title' is an In/Out argument to 'GetWindowTextW' (declared at d:\\windows kits\\10\\include\\10.0.22621.0\\um\\winuser.h:8950)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "'wnd_title' should not be NULL, because this is not consistent with the SAL annotation on 'GetWindowTextW'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 64,
+                  "endLine": 79,
+                  "endColumn": 74
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HandleUserInput::GetActiveWindowTitle",
+                  "decoratedName": "?GetActiveWindowTitle@HandleUserInput@@SAPEA_WXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "Return value ignored: 'GetKeyboardState'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+                },
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 2,
+                  "endLine": 171,
+                  "endColumn": 19
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HandleUserInput::GetSymbol",
+                  "decoratedName": "?GetSymbol@HandleUserInput@@SA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.37.32824.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Bugor/5 sem/SP/SemesterWork/projectClone/KeyLogger-master/KeyLogger/HandleUserInput.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "9ee3ef1115a9c43f960f12d2de2cd8eabb67b50cc1bca294d6ff58cb9266bca9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/bugor/5 sem/sp/semesterwork/projectclone/keylogger-master/keylogger/handleuserinputs.h"
+          },
+          "hashes": {
+            "sha-256": "1434652a5e8d505ccfdec8e44260495007eac94f08c69e7c57a1f84378059d78"
+          }
+        }
+      ]
+    }
+  ]
+}
