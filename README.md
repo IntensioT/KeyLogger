@@ -88,7 +88,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any questions or support, please contact the project maintainer:
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- Email: [intensioT@gmail.com](mailto:intensioT@gmail.com)
 - GitHub: [IntensioT](https://github.com/IntensioT)
 
 ---
